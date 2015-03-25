@@ -45,10 +45,10 @@ This is entry application for Ruby on Rails Workshops held by Netguru.
 
 17. Make sure your project is available on Heroku with **seeds data**.
 
-## What disqualifies your application
+## Requirements for qualification of application
 
-1. Tests are not passing.
+1. Tests passed.
 
-2. Website doesn't work on Heroku.
+2. Website work on Heroku.
 
-3. Design is not finished.
+3. Complete design of website.
