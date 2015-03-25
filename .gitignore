@@ -28,3 +28,9 @@ local.local.*
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore working files of RubyMine
+*.iml
+.idea/
+*.ipr
+*.iws
