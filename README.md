@@ -7,8 +7,8 @@ This is entry application for Ruby on Rails Workshops held by Netguru.
 Reason for changing the original files is compadibility issues with environment I work in.
 Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
-1. Change of 'pg' gem to pre-release 0.18 . Default version (0.17) showed errors with pg.ext file.
-2. Add 'tzinfo-data' gem. This shows time zone related to database.
+1. Change of 'pg' gem to pre-release 0.18 . Default version (0.17) showed errors with pg.ext file.  [Source](http://stackoverflow.com/questions/27321017/active-support-dependencies-rb247-require-cannot-load-such-file-2-1-pg-ex)
+2. Add 'tzinfo-data' gem. This solves time zone errors related to database. [Source](http://stackoverflow.com/questions/23022258/tzinfodatasourcenotfound-error-starting-rails-v4-1-0-server-on-windows)
 
 ### Issues solved:
 
