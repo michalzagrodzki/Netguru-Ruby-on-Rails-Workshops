@@ -1,24 +1,19 @@
 # Workshops application
 
-Hi! We think it’s great that you want to **join along with Netguru** to start learning **Ruby on Rails**. Taking part in workshops is also a **great opportunity to start an internship** with us and become one of the Netguru folks. Since you have just taken your first step on your adventure with programming in RoR, we challenge you to complete the following task. **Ready, steady…Go!**
+This is entry application for Ruby on Rails Workshops held by Netguru.
 
-### Let’s start with a setup:
+### Changes to base files:
 
-**Source code**
+Reason for changing the original files is compatibility issues with environment I work in.
+Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
-Don't fork the repository. Clone it (`git clone git@github.com:netguru-training/workshops.git`) and make a new one – we want all of you to have equal chances.
+1. Change of 'pg' gem to pre-release 0.18 . Default version (0.17) showed errors with pg.ext file.  [Source](http://stackoverflow.com/questions/27321017/active-support-dependencies-rb247-require-cannot-load-such-file-2-1-pg-ex)
+2. Add 'tzinfo-data' gem. This solves time zone errors related to database. [Source](http://stackoverflow.com/questions/23022258/tzinfodatasourcenotfound-error-starting-rails-v4-1-0-server-on-windows)
+3. Configure PostgreSQL through pgAdmin III. Add new Group Roles as 'workshops'. In properties checked 'login', 'superuser', 'create roles'. Other fields left as default.
+4. Configure pg_hba.conf to log into database. CHange METHOD from 'md5' to 'trust'. [Source](http://stackoverflow.com/questions/2942485/psql-fatal-ident-authentication-failed-for-user-postgres)
+5. Add extra options to database.yml. Port and timeout options were specified. [Source](http://stackoverflow.com/questions/7689097/ruby-on-rails-how-can-i-edit-database-yml-for-postgresql)
 
-**Database**
-
-Copy the database config file (and edit if needed): 
-` cp config/database.yml.sample config/database.yml`
-
-Make sure the user you've listed in `database.yml` is created for postgres:
-`createuser -s -r workshops`
-
-Setup the database for your application (development and test environments):
-`bin/rake db:setup`
-`bin/rake db:test:prepare`
+### Issues solved:
 
 
 ### Issues to solve:
@@ -61,21 +56,10 @@ Setup the database for your application (development and test environments):
 
 17. Make sure your project is available on Heroku with **seeds data**.
 
-## What disqualifies your application
+## Requirements for qualification of application
 
-1. Tests are not passing.
+1. Tests passed.
 
-2. Website doesn't work on Heroku.
+2. Website work on Heroku.
 
-3. Design is not finished.
-
-### Here are some great resources to help you with kicking off your adventure with Ruby and Rails:
-
-* [http://www.codeschool.com/paths/ruby](http://www.codeschool.com/paths/ruby) - free Ruby and Rails courses available at the elementary level
-* you want to be sure your Ruby basis are solid? Check out the Ruby Koans - [http://rubykoans.com/](http://rubykoans.com/)
-* [http://guides.rubyonrails.org/](http://guides.rubyonrails.org/) - sooner or later this one will come in handy
-* not feeling comfortable with JavaScript / jQuery? CodeSchool can help you with this one too - [http://www.codeschool.com/courses/try-jquery](http://www.codeschool.com/courses/try-jquery)
-
-## Good Luck! 
-
-*We want all attendees at netguru workshops to have an awesome harassment-free experience. Read our full [code of conduct](https://github.com/netguru-training/workshops/blob/master/code_of_conduct.md) for more details.*
+3. Complete design of website.
