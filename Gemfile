@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.8'
 
-gem 'pg'
+# Change version of gemfile. Version 0.17 does not work in Win7 x64
+gem 'pg', '~> 0.18.0.pre20141117110243'
+
 gem 'draper'
 gem 'decent_exposure'
 gem 'decent_decoration'
@@ -19,6 +21,9 @@ gem 'therubyracer', platforms: :ruby
 gem 'travis'
 gem 'ffaker'
 gem 'konf'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
   gem 'spring'
