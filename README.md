@@ -4,7 +4,7 @@ This is entry application for Ruby on Rails Workshops held by Netguru.
 
 ### Changes to base files:
 
-Reason for changing the original files is compadibility issues with environment I work in.
+Reason for changing the original files is compatibility issues with environment I work in.
 Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 1. Change of 'pg' gem to pre-release 0.18 . Default version (0.17) showed errors with pg.ext file.  [Source](http://stackoverflow.com/questions/27321017/active-support-dependencies-rb247-require-cannot-load-such-file-2-1-pg-ex)
