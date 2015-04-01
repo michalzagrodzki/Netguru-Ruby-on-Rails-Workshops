@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'categories/index'
+
   root 'categories#index'
 
   # routes for users are carried out by Devise
