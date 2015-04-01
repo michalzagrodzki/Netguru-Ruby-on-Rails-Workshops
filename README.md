@@ -19,6 +19,8 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 6. Fix specs for `Review` model.
 
+11. In navigation bar insert links for guest users to login / signup and for users that are already logged in - to logout.
+
 ### Issues to solve:
 
 1. There are a few missing fields on the `User` model. Make sure `spec/models/user_spec.rb passes.`
