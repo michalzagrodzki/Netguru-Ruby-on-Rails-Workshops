@@ -1,14 +1,21 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.8'
+# Change version of rails.
+gem 'rails', '~> 4.2.0'
 
 # Change version of gemfile. Version 0.17 does not work in Win7 x64
 gem 'pg', '~> 0.18.0.pre20141117110243'
 
+# Change version of gemfile. Earlier version blocks performing db:migrate in Win7 x64
+gem 'devise', '~> 3.4.1'
+
+# Add bcrypt. This gem is required to encrypt password in db.
+# Required by ActiveModel has_secure_password method
+gem 'bcrypt', '~> 3.1.7'
+
 gem 'draper'
 gem 'decent_exposure'
 gem 'decent_decoration'
-gem 'devise'
 gem 'simple_form', '~> 3.1.0rc'
 gem 'bootstrap-sass', '~> 3.1.0'
 gem 'haml-rails'
