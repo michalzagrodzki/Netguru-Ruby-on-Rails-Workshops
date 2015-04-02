@@ -6,32 +6,52 @@ class CategoriesController < ApplicationController
   expose(:product) { Product.new }
 
   def index
+    # description of @categories is not necessary - it is handled by decent_exposure
   end
 
   def show
+    # description of @category is not necessary - it is handled by decent_exposure
   end
 
   def new
+    if current_user.admin?
+      self.category = Category.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def edit
+    if current_user.admin?
+      self.category = Category.find(params[:id])
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
-    self.category = Category.new(category_params)
+    if current_user.admin?
+      self.category = Category.new(category_params)
 
-    if category.save
-      redirect_to category, notice: 'Category was successfully created.'
+      if category.save
+        redirect_to category, notice: 'Category was successfully created.'
+      else
+        render action: 'new'
+      end
     else
-      render action: 'new'
+      redirect_to new_user_session_path
     end
   end
 
   def update
-    if category.update(category_params)
-      redirect_to category, notice: 'Category was successfully updated.'
+    if current_user.admin?
+      if category.update(category_params)
+        redirect_to category, notice: 'Category was successfully updated.'
+      else
+        render action: 'edit'
+      end
     else
-      render action: 'edit'
+      redirect_to new_user_session_path
     end
   end
 

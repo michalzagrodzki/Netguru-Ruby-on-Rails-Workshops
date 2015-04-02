@@ -25,15 +25,15 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 1. There are a few missing fields on the `User` model. Make sure `spec/models/user_spec.rb passes.`
 
+3. Check `spec/controllers/categories_controller_spec.rb` - there should be a
+   couple errors on actions checking admin presence.
+
 ### Issues to solve:
 
 2. Make sure settings for [devise](https://github.com/plataformatec/devise) are
    configured properly.  If they aren’t, most of the controller specs will fail:
   * Most of the configuration changes require the server to be restarted.
   * At some point **you'll have to overwrite the default devise views** - you can find all the required info in the gem readme.
-
-3. Check `spec/controllers/categories_controller_spec.rb` - there should be a
-   couple errors on actions checking admin presence.
 
 4. Next up: `Product` model and `spec/models/product_spec.rb`. Play with validations a bit, calculate average rating and you'll be good to go.
 
