@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :reviews
   has_many :products
 
+  # Place for action related to user
+
   # Validates presence of firstname and lastname
   validates :firstname, presence: true
   validates :lastname, presence: true
