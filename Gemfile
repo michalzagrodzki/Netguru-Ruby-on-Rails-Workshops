@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Change version of rails.
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 4.1.8'
 
 # Change version of gemfile. Version 0.17 does not work in Win7 x64
 gem 'pg', '~> 0.18.0.pre20141117110243'
