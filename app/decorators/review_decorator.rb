@@ -1,7 +1,8 @@
 class ReviewDecorator < Draper::Decorator
   delegate_all
 
-  def author  
+  # Defines variable, which takes firstname and lastname from User model
+  def author
+    "#{user.firstname} #{user.lastname}"
   end
-
 end

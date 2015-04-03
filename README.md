@@ -28,6 +28,8 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 3. Check `spec/controllers/categories_controller_spec.rb` - there should be a
    couple errors on actions checking admin presence.
 
+8. Make sure `ReviewDecorator` is used properly, There's one action which needs to be declared there. See `spec/decorators/review_decorator_spec.rb` for details.
+
 ### Issues to solve:
 
 2. Make sure settings for [devise](https://github.com/plataformatec/devise) are
@@ -38,8 +40,6 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 4. Next up: `Product` model and `spec/models/product_spec.rb`. Play with validations a bit, calculate average rating and you'll be good to go.
 
 7. You'll have to deal with `ProductsController`. Again, you'll have to check for permissions. Only a product owner should be able to make changes. Make sure to give the user a proper message when they try to perform forbidden actions.
-
-8. Make sure `ReviewDecorator` is used properly, There's one action which needs to be declared there. See `spec/decorators/review_decorator_spec.rb` for details.
 
 9. Check if each review is assigned to user who wrote it.
 
