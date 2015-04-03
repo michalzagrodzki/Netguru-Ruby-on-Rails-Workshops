@@ -155,20 +155,20 @@ review_h_01.save!
 
 # Review - umbrella - should be 5 reviews here
 
-review_h_01 = Review.create(
+review_u_01 = Review.create(
     content: 'Good looking',
     rating: 5,
     product_id: 4,
     user_id: 5 )
 
-review_h_01.save!
+review_u_01.save!
 
 # Review - bags - should be 5 reviews here
 
-review_h_01 = Review.create(
+review_b_01 = Review.create(
     content: 'Spacious',
     rating: 3,
     product_id: 2,
     user_id: 5 )
 
-review_h_01.save!
+review_b_01.save!
