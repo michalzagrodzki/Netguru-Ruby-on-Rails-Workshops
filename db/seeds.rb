@@ -74,3 +74,25 @@ user_06 = User.create(
 
 user_06.skip_confirmation!
 user_06.save!
+
+# Data for Category
+
+cat_01 = Category.create(
+            name: 'shoes' )
+
+cat_01.save!
+
+cat_02 = Category.create(
+    name: 'hats' )
+
+cat_02.save!
+
+cat_03 = Category.create(
+    name: 'umbrella' )
+
+cat_03.save!
+
+cat_04 = Category.create(
+    name: 'bags' )
+
+cat_04.save!
