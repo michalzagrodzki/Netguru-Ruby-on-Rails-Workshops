@@ -100,6 +100,69 @@ product_s_01 = Product.create(
 
 product_s_01.save!
 
+product_s_02 = Product.create(
+    title: 'longwings',
+    price: 200.00,
+    description: 'Comfortable shoes.',
+    category_id: 1,
+    user_id: 6 )
+
+product_s_02.save!
+
+product_s_03 = Product.create(
+    title: 'wingtips',
+    price: 165.00,
+    description: 'Comfortable shoes.',
+    category_id: 1,
+    user_id: 3 )
+
+product_s_03.save!
+
+product_s_04 = Product.create(
+    title: 'brogued captoes',
+    price: 140.00,
+    description: 'Comfortable shoes.',
+    category_id: 1,
+    user_id: 2 )
+
+product_s_04.save!
+
+product_s_05 = Product.create(
+    title: 'wholecuts',
+    price: 170.00,
+    description: 'Comfortable shoes.',
+    category_id: 1,
+    user_id: 5 )
+
+product_s_05.save!
+
+product_s_06 = Product.create(
+    title: 'cap toe bals',
+    price: 150.00,
+    description: 'Comfortable shoes.',
+    category_id: 1,
+    user_id: 3 )
+
+product_s_06.save!
+
+product_s_07 = Product.create(
+    title: 'perf toe bals',
+    price: 150.00,
+    description: 'Comfortable shoes.',
+    category_id: 1,
+    user_id: 3 )
+
+product_s_07.save!
+
+product_s_08 = Product.create(
+    title: 'boat shoes',
+    price: 150.00,
+    description: 'Comfortable shoes.',
+    category_id: 1,
+    user_id: 2 )
+
+product_s_08.save!
+
 # Category - hats - should be 8 products here
 
 product_h_01 = Product.create(
@@ -138,64 +201,4 @@ product_h_04 = Product.create(
 
 product_h_04.save!
 
-# Category - umbrella - should be 8 products here
-
-product_u_01 = Product.create(
-            title: 'classic',
-            price: 20.00,
-            description: 'Classic style umbrella for daily use',
-            category_id: 3,
-            user_id: 3 )
-
-product_u_01.save!
-
-# Category - bags - should be 8 products here
-
-product_b_01 = Product.create(
-            title: 'handbag',
-            price: 50.00,
-            description: 'Bag for a city stroll',
-            category_id: 4,
-            user_id: 5 )
-
-product_b_01.save!
-
-# Review - shoes - should be 5 reviews here
-
-review_s_01 = Review.create(
-    content: 'Comfortable',
-    rating: 5,
-    product_id: 1,
-    user_id: 5 )
-
-review_s_01.save!
-
-# Review - hats - should be 5 reviews here
-
-review_h_01 = Review.create(
-    content: 'Stylish',
-    rating: 4,
-    product_id: 3,
-    user_id: 2 )
-
-review_h_01.save!
-
-# Review - umbrella - should be 5 reviews here
-
-review_u_01 = Review.create(
-    content: 'Good looking',
-    rating: 5,
-    product_id: 4,
-    user_id: 5 )
-
-review_u_01.save!
-
-# Review - bags - should be 5 reviews here
-
-review_b_01 = Review.create(
-    content: 'Spacious',
-    rating: 3,
-    product_id: 2,
-    user_id: 5 )
-
-review_b_01.save!
+# Category - umbrella - should be 8 products
