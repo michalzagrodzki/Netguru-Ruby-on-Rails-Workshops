@@ -26,7 +26,7 @@ gem 'quiet_assets'
 gem 'jquery-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'travis'
-gem 'ffaker'
+gem 'faker'
 gem 'konf'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
