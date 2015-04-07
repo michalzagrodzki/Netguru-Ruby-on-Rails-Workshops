@@ -5,7 +5,7 @@ class Review < ActiveRecord::Base
 
   # Validates presence of content, rating, user_id
   validates :content, presence: true
-  validates :rating, presence: true
+  validates :rating, presence: true, numericality: { only_integer: true }
   validates :user_id, presence: true
 
 end
