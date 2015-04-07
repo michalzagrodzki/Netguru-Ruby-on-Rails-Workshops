@@ -14,6 +14,7 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 5. Add extra options to database.yml. Port and timeout options were specified. [Source](http://stackoverflow.com/questions/7689097/ruby-on-rails-how-can-i-edit-database-yml-for-postgresql)
 6. Change version of Devise. Previous version blocked performing db:migrate.
 7. Add bcrypt gem. This gem is required for encrypting passwords.
+8. In Rubymine go to Run/Edit Configurations . Go to Rails/Production, click tab Bundler and check box: 'Run the script in content of the bundle'. Do the same for Rails/Developoment, Rake/test, Rake/spec. After that go to Tools/Run Rake Task and select 'Reload rake task list'. It will load the rake tasks from within the projects libraries and gems.
 
 ### Issues solved:
 
