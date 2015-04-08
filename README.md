@@ -32,14 +32,14 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 8. Make sure `ReviewDecorator` is used properly, There's one action which needs to be declared there. See `spec/decorators/review_decorator_spec.rb` for details.
 
+4. Next up: `Product` model and `spec/models/product_spec.rb`. Play with validations a bit, calculate average rating and you'll be good to go.
+
 ### Issues to solve:
 
 2. Make sure settings for [devise](https://github.com/plataformatec/devise) are
    configured properly.  If they aren’t, most of the controller specs will fail:
   * Most of the configuration changes require the server to be restarted.
   * At some point **you'll have to overwrite the default devise views** - you can find all the required info in the gem readme.
-
-4. Next up: `Product` model and `spec/models/product_spec.rb`. Play with validations a bit, calculate average rating and you'll be good to go.
 
 7. You'll have to deal with `ProductsController`. Again, you'll have to check for permissions. Only a product owner should be able to make changes. Make sure to give the user a proper message when they try to perform forbidden actions.
 
