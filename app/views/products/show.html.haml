@@ -16,10 +16,10 @@
   = product.category.name
 
 %h3 Reviews
-= render 'reviews/form'
-
 = render reviews
 
-= link_to 'Edit', edit_category_product_path(category.id, product.id)
-\|
-= link_to 'Back', category_products_path, class: 'btn btn-primary'
+-if user_signed_in?
+  = render 'reviews/form'
+  = link_to 'Edit', edit_category_product_path(category.id, product.id)
+
+= link_to 'Back', [category], class: 'btn btn-primary'
