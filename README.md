@@ -34,6 +34,8 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 4. Next up: `Product` model and `spec/models/product_spec.rb`. Play with validations a bit, calculate average rating and you'll be good to go.
 
+10. If some actions (like links to edit a page, create a new one) are not allowed for a particular user then please hide them in a template (for example with `if`).
+
 ### Issues to solve:
 
 2. Make sure settings for [devise](https://github.com/plataformatec/devise) are
@@ -44,8 +46,6 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 7. You'll have to deal with `ProductsController`. Again, you'll have to check for permissions. Only a product owner should be able to make changes. Make sure to give the user a proper message when they try to perform forbidden actions.
 
 9. Check if each review is assigned to user who wrote it.
-
-10. If some actions (like links to edit a page, create a new one) are not allowed for a particular user then please hide them in a template (for example with `if`).
 
 12. Don't forget to check if application works in the browser :).
 
