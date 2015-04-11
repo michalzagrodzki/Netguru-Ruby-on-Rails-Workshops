@@ -196,3 +196,65 @@ product_h_04 = Product.create(
 product_h_04.save!
 
 # Category - umbrella - should be 8 products
+
+product_u_01 = Product.create(
+    title: 'classic',
+    price: 20.00,
+    description: 'Umbrella for all weathers',
+    category_id: 3,
+    user_id: 4 )
+
+product_u_01.save!
+
+# Category - bags - should be 8 products
+
+product_b_01 = Product.create(
+    title: 'suitcase',
+    price: 50.00,
+    description: 'Solid suitcase.',
+    category_id: 4,
+    user_id: 2 )
+
+product_b_01.save!
+
+# Reviews
+
+review_01 = Review.create(
+    content: 'splendid',
+    rating: 2,
+    user_id: 4,
+    prodcut_id: 2 )
+
+review_01.save!
+
+review_02 = Review.create(
+    content: 'marvelous',
+    rating: 3,
+    user_id: 2,
+    prodcut_id: 5 )
+
+review_02.save!
+
+review_03 = Review.create(
+    content: 'nice',
+    rating: 4,
+    user_id: 1,
+    prodcut_id: 6 )
+
+review_03.save!
+
+review_04 = Review.create(
+    content: 'beautiful',
+    rating: 1,
+    user_id: 3,
+    prodcut_id: 8 )
+
+review_04.save!
+
+review_05 = Review.create(
+    content: 'pretty',
+    rating: 3,
+    user_id: 5,
+    prodcut_id: 1 )
+
+review_05.save!
