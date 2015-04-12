@@ -16,7 +16,7 @@ class Product < ActiveRecord::Base
       # counting average from rating column
       self.reviews.average(:rating)
     else
-      'this review does not have any rating yet'
+      'this product does not have any rating yet'
     end
   end
 
