@@ -15,6 +15,19 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    if user_signed_in?
+      if current_user == review.user_id
+        if self.product.edit(product_params)
+          redirect_to category_product_url(category, product), notice: 'Product was successfully edited.'
+        else
+          render action: 'edit'
+        end
+      else
+        redirect_to category_product_url(category, product), flash: { error: 'You are not allowed to edit this product.' }
+      end
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
@@ -34,10 +47,14 @@ class ProductsController < ApplicationController
 
   def update
     if user_signed_in?
-      if self.product.update(product_params)
-        redirect_to category_product_url(category, product), notice: 'Product was successfully updated.'
-        else
-        render action: 'edit'
+      if current_user == review.user_id
+        if self.product.update(product_params)
+          redirect_to category_product_url(category, product), notice: 'Product was successfully updated.'
+          else
+          render action: 'edit'
+        end
+      else
+        redirect_to category_product_url(category, product), flash: { error: 'You are not allowed to edit this product.' }
       end
     else
       redirect_to new_user_session_path
@@ -46,13 +63,17 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1
   def destroy
-    product.destroy
-    redirect_to category_url(product.category), notice: 'Product was successfully destroyed.'
+    if user_signed_in?
+      product.destroy
+      redirect_to category_url(product.category), notice: 'Product was successfully destroyed.'
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :category_id)
+    params.require(:product).permit(:title, :description, :price, :category_id, :user_id)
   end
 end
