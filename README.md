@@ -36,14 +36,14 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 10. If some actions (like links to edit a page, create a new one) are not allowed for a particular user then please hide them in a template (for example with `if`).
 
-### Issues to solve:
+7. You'll have to deal with `ProductsController`. Again, you'll have to check for permissions. Only a product owner should be able to make changes. Make sure to give the user a proper message when they try to perform forbidden actions.
 
 2. Make sure settings for [devise](https://github.com/plataformatec/devise) are
    configured properly.  If they aren’t, most of the controller specs will fail:
   * Most of the configuration changes require the server to be restarted.
   * At some point **you'll have to overwrite the default devise views** - you can find all the required info in the gem readme.
 
-7. You'll have to deal with `ProductsController`. Again, you'll have to check for permissions. Only a product owner should be able to make changes. Make sure to give the user a proper message when they try to perform forbidden actions.
+### Issues to solve:
 
 9. Check if each review is assigned to user who wrote it.
 
@@ -61,7 +61,7 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 ## Requirements for qualification of application
 
-1. Tests passed.
+1. Tests passed. - Done.
 
 2. Website work on Heroku.
 
