@@ -1,13 +1,17 @@
-%p#notice= notice
+.col-lg-12.col-md-12.col-sm-12.col-xs-12
+  .background
+    %h1.text-center= category.name.capitalize
 
-%p
-  %b Name:
-  = category.name
-
-%p
-  - category.products.each do |product|
-    = product.title
-    = link_to 'show', [category, product]
+    .row
+      - category.products.each do |product|
+        .col-lg-3.col-md-3.col-sm-6.col-xs-12
+          = link_to [category, product] do
+            .thumbnail
+              .caption
+                %h4.text-center= product.title.capitalize
+                %p.text-center.text-muted= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
+                %p.text-center= product.description
+                %p.text-center.text-muted= product.average_rating
 
 -if user_signed_in?
   %p
@@ -17,4 +21,4 @@
 - if current_user.try(:admin?)
   = link_to 'Edit', edit_category_path(category)
 
-= link_to 'Back', categories_path, class: 'btn btn-primary'
+.btn.btn-default.btn-block= link_to 'Go back to main page', categories_path
