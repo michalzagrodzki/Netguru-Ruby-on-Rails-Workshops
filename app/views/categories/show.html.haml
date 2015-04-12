@@ -10,7 +10,7 @@
               .caption
                 %h4.text-center= product.title.capitalize
                 %p.text-center.text-muted= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
-                %p.text-center= product.description
+                %p.text-center= truncate(product.description, length: 20, separator: ' ')
                 %p.text-center.text-muted= product.average_rating
 
 -if user_signed_in?
