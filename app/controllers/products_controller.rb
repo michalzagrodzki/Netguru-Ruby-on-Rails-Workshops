@@ -57,6 +57,7 @@ class ProductsController < ApplicationController
         redirect_to category_product_url(category, product), flash: { error: 'You are not allowed to edit this product.' }
       end
     else
+      flash[:alert] = "You are not allowed to edit this product."
       redirect_to new_user_session_path
     end
   end
