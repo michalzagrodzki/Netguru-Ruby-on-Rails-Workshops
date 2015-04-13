@@ -1,7 +1,10 @@
-%h1 Editing category
-
-= render 'form'
-
-= link_to 'Show', category
-\|
-= link_to 'Back', categories_path, class: 'btn btn-primary'
+.col-lg-offset-5.col-md-offset-4.col-sm-offset-3.col-xs-offset-1
+  .col-lg-4.col-md-6.col-sm-7.col-xs-11
+    %h2.text-center.text-muted Editing category
+    %br/
+    = render 'form'
+    %br/
+    .btn.btn-default.btn-block= link_to 'Show', category
+    %br/
+    %br/
+    .btn.btn-default.btn-block= link_to 'Back', categories_path
