@@ -14,9 +14,9 @@
     .thumbnail
       .caption
         = render reviews
-    %hr
 
     -if user_signed_in?
+      %hr
       = render 'reviews/form'
       = link_to 'Edit', edit_category_product_path(category.id, product.id)
 
