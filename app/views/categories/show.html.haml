@@ -11,14 +11,19 @@
                 %h4.text-center= product.title.capitalize
                 %p.text-center.text-muted= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
                 %p.text-center= truncate(product.description, length: 20, separator: ' ')
-
+  %br/
 -if user_signed_in?
-  %p
-    %h3 New product
-    = render 'products/form'
+
+  %h4.text-center.text-muted New product
+  = render 'products/form'
+  %br/
 
 - if current_user.try(:admin?)
-  = link_to 'Edit', edit_category_path(category)
+  .col-lg-offset-3.col-md-offset-3.col-sm-offset-3
+    .col-lg-8.col-md-8.col-sm-8.col-xs-12
+      .btn.btn-default.btn-block= link_to'Edit category', edit_category_path(category)
+      %br/
 
-.col-lg-12.col-md-12.col-sm-12.col-xs-12
-  .btn.btn-default.btn-block= link_to 'Go back to main page', categories_path
+.col-lg-offset-4.col-md-offset-3.col-sm-offset-3
+  .col-lg-6.col-md-8.col-sm-8.col-xs-12
+    .btn.btn-default.btn-block= link_to 'Go back to main page', categories_path
