@@ -2,8 +2,9 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!
 
   expose(:user)
-  expose(:review)
-  expose(:product)
+  expose(:users)
+  expose(:reviews)
+  expose(:products)
 
   def index
     # description of @users is not necessary - it is handled by decent_exposure
