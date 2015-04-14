@@ -47,9 +47,9 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 14. Create user profile page (using Boostrap 3). Use your imagination about what should go there. You can start with name, email, etc.
 
-### Issues to solve:
-
 9. Check if each review is assigned to user who wrote it.
+
+### Issues to solve:
 
 12. Don't forget to check if application works in the browser :).
 
