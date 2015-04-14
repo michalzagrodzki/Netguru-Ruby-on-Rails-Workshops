@@ -1,2 +1,48 @@
-%h1 Users#show
-%p Find me in app/views/users/show.html.haml
+.col-lg-12.col-md-12.col-sm-12.col-xs-12
+  .background
+    -# section for gravatar
+    .col-lg-4.col-md-4.col-sm-4.col-xs-4
+
+    -# section for user description
+    .col-lg-8.col-md-8.col-sm-8.col-xs-8
+      %h2 #{ user.firstname } #{ user.lastname }
+      %p.text-muted Last time of your visit was on #{ user.last_sign_in_at.strftime("%e %B %Y") }
+      %p.text-muted You have #{ pluralize(user.reviews.size, 'review') } and #{ pluralize(user.products.size, 'item') } posted.
+
+.col-lg-offset-2.col-md-offset-1.col-sm-offset-1
+  .col-lg-8.col-md-10.col-sm-10.col-xs-12
+
+    .row
+      -# section for items
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12
+        %h3.text-center Your newest items.
+        -if user.products.size == 0
+          -# message for no products
+          .thumbnail
+            .caption
+              %h4.text-center You didn't post any products yet.
+        - else
+          -# loop showing last 5 products
+          - user.products.limit(5).each do |product|
+            .thumbnail
+              .caption
+                %h4.text-center= product.title.upcase
+                %p.text-center.text-muted= product.created_at.strftime("%e %B %Y")
+                %p.text-center.text-muted There are #{ pluralize(product.reviews.size, 'review' )} for your product.
+
+      -# section for reviews
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12
+        %h3.text-center Your newest reviews.
+        -if user.reviews.size == 0
+          -# message for no reviews
+          .thumbnail
+            .caption
+              %h4.text-center You didn't publish any reviews yet.
+        - else
+          -# loop showing last 5 reviews
+          - user.reviews.limit(5).each do |review|
+            .thumbnail
+              .caption
+                %h4.text-center= review.content
+                %p.text-center.text-muted= review.created_at.strftime("%e %B %Y")
+
