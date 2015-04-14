@@ -2,16 +2,20 @@
   .background
     -# section for gravatar
     .col-lg-4.col-md-4.col-sm-4.col-xs-4
-
+      .pull-right #{image_tag user.gravatar_url}
     -# section for user description
     .col-lg-8.col-md-8.col-sm-8.col-xs-8
       %h2 #{ user.firstname } #{ user.lastname }
-      %p.text-muted Last time of your visit was on #{ user.last_sign_in_at.strftime("%e %B %Y") }
+      -# conditional for missing last login date
+      - if user.try(:last_sign_in_at).try(:strftime, "%e %B %Y") == nil
+        %p.text-muted You never logged in.
+      - else
+        %p.text-muted Last time of your visit was on #{ user.last_sign_in_at.strftime("%e %B %Y") }
       %p.text-muted You have #{ pluralize(user.reviews.size, 'review') } and #{ pluralize(user.products.size, 'item') } posted.
 
 .col-lg-offset-2.col-md-offset-1.col-sm-offset-1
   .col-lg-8.col-md-10.col-sm-10.col-xs-12
-
+    %hr
     .row
       -# section for items
       .col-lg-6.col-md-6.col-sm-6.col-xs-12
