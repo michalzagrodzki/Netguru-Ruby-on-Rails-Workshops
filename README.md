@@ -45,6 +45,8 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 15. On user profile list 5 last user's reviews with formated date (dd-mm-yy).
 
+14. Create user profile page (using Boostrap 3). Use your imagination about what should go there. You can start with name, email, etc.
+
 ### Issues to solve:
 
 9. Check if each review is assigned to user who wrote it.
@@ -52,8 +54,6 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 12. Don't forget to check if application works in the browser :).
 
 13. Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]). Please use [Bootstrap 3](http://getbootstrap.com/css/) for styling, which is already added to application. Psss! Don't forget about styling `devise` views :).
-
-14. Create user profile page (using Boostrap 3). Use your imagination about what should go there. You can start with name, email, etc.
 
 16. Fill `seeds.rb` with 5 accounts for user and one admin account to login and example category with products and reviews.
 
