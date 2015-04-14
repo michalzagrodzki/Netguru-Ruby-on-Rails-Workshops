@@ -47,6 +47,6 @@
           - user.reviews.limit(5).each do |review|
             .thumbnail
               .caption
-                %h4.text-center= review.content
+                %h4.text-center= truncate(review.content, length: 40, separator: ' ')
                 %p.text-center.text-muted= review.created_at.strftime("%e %B %Y")
 
