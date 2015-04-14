@@ -32,6 +32,9 @@ gem 'konf'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Gravtastic gem to show Gravatar images if user have account
+gem 'gravtastic'
+
 group :development do
   gem 'spring'
 end
