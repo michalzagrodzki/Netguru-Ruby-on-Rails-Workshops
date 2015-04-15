@@ -1,1 +1,160 @@
 @import "bootstrap";
+
+/******************************************
+             Fonts for project
+******************************************/
+
+@font-face {
+  font-family: 'Mohave';
+  src:  asset_url('mohave.eot');
+  src:  asset_url('mohave.eot?#iefix') format('embedded-opentype'),
+  asset_url('mohave.svg#Mohave') format('svg'),
+  asset_url('mohave.woff') format('woff'),
+  asset_url('mohave.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mohave-Bold';
+  src:  asset_url('Mohave-Bold.eot');
+  src:  asset_url('Mohave-Bold.eot?#iefix') format('embedded-opentype'),
+        asset_url('Mohave-Bold.svg#Mohave') format('svg'),
+        asset_url('Mohave-Bold.woff') format('woff'),
+        asset_url('Mohave-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mohave-Bold-Italic';
+  src:  asset_url('mohave_bold_italic.eot');
+  src:  asset_url('mohave_bold_italic.eot?#iefix') format('embedded-opentype'),
+  asset_url('mohave_bold_italic.svg#Mohave') format('svg'),
+  asset_url('mohave_bold_italic.woff') format('woff'),
+  asset_url('mohave_bold_italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+$mohave-regular: Mohave, sans-serif;
+$mohave-bold: Mohave-Bold, sans-serif;
+
+
+/******************************************
+             Mixins for project
+******************************************/
+
+// Fonts
+$mohave-regular: Mohave, sans-serif;
+$mohave-bold: Mohave-Bold, sans-serif;
+$mohave-bold-italic: Mohave-Bold-Italic, sans-serif;
+
+// Colors
+$nav-bar-color: #a18e73;
+$background-color: #dbd4ce;
+
+$head-font-color: #4c4b4a;
+$secondary-font-color: #a18e73;
+$footer-font-color: #40382e;
+
+$button-color-big: #f6f2ec;
+$button-color-login: #000000;
+$button-border-color: #2f2c29;
+
+
+
+/******************************************
+             Title Section
+******************************************/
+
+.navbar-modified{
+  position: relative;
+  margin-bottom: 0px;
+  background-color: $nav-bar-color;
+  border-color: $nav-bar-color;
+  border-bottom: 3px solid $button-border-color;
+}
+
+.navbar-modified:before{
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid $button-border-color;
+  bottom: 6px;
+  z-index: 1;
+}
+
+.background {
+  //position: absolute;
+  background-color: $background-color;
+  top: 20px;
+  //bottom: 0px;
+  width: 100%;
+  height: 100%;
+  //min-height: 1000px;
+  //height: 100%;
+  display: block;
+}
+
+.footer{
+  position: relative;
+  //top: 2000px;
+  bottom: -60px;
+  height: 180px;
+  padding: 60px 0;
+  width: 100%;
+  background-color: $nav-bar-color;
+
+  p {
+    color: $footer-font-color;
+  }
+
+}
+
+.head-font {
+  font-family: $mohave-bold;
+  color: $head-font-color;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94%;
+  //-webkit-font-smoothing: antialiased;
+}
+
+.second-head-font {
+  font-family: $mohave-regular;
+  color: $head-font-color;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.category-button{
+  width: auto;
+  height: auto;
+  border-radius: 0px;
+  position: relative;
+  background-color: $button-color-big;
+  border: 3px solid $button-border-color;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  h4{
+    font-family: $mohave-bold;
+    font-size: 32px;
+    color: $head-font-color;
+  }
+}
+.category-button:before{
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  right: -5px;
+  bottom: -6px;
+  z-index: 1;
+  border-top: 1px solid $button-border-color;
+  border-bottom: 1px solid $button-border-color;
+}
