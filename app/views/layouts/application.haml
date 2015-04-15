@@ -10,8 +10,8 @@
 
   %body
     = render 'layouts/navbar'
-
-    .container-fluid
-      = render 'layouts/messages'
-      = yield
-  = render 'layouts/footer'
+    .background
+      .container-fluid
+        = render 'layouts/messages'
+        = yield
+      = render 'layouts/footer'
