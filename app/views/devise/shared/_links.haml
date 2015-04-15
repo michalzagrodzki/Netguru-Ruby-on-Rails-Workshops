@@ -9,7 +9,7 @@
   %br/
 
 - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
-  %button.btn.btn-default.btn-block.btn-sm= link_to "Have you forgot your password?", new_password_path(resource_name)
+  %button.btn.btn-default.btn-block.btn-sm= link_to "Have you forgotten your password?", new_password_path(resource_name)
   %br/
 
 - if devise_mapping.confirmable? && controller_name != 'confirmations'
