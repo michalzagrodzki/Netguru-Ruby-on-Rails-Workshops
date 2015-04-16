@@ -513,3 +513,64 @@ hr {
   font-family: $open-sans-bold;
   font-size: $review-footer-font-size;
 }
+
+/******************************************
+             User Section
+******************************************/
+
+// User head name and description
+.user-title-area{
+  @extend .product-title-area;
+
+  padding-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+
+  h2{
+    font-family: $mohave-bold;
+    color: $head-font-color;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  p{
+    font-family: $open-sans-regular;
+    color: lighten($head-font-color, 15%);
+  }
+}
+
+// User titles for sections - items and reviews
+.item-review-title-font{
+  @extend .review-title-font;
+  text-transform: uppercase;
+}
+
+// User areas for items and reviews
+
+.user-item-review-area {
+  @extend .review-area;
+
+  margin-bottom: 20px;
+
+  // Text of item and review
+  p{
+    font-family: $open-sans-regular;
+    color: lighten($head-font-color, 20%);
+    font-size: $review-footer-font-size;
+  }
+}
+// Text of user's items
+.user-item-text{
+  font-family: $mohave-bold;
+  color: lighten($head-font-color, 30%);;
+  font-size: $description-review-body-font-size-desktop+8;
+}
+
+// Text of user's reviews
+.user-review-text {
+
+    font-family: $open-sans-regular;
+    color: lighten($head-font-color, 30%);;
+    font-size: $description-review-body-font-size-desktop+5;
+
+}
