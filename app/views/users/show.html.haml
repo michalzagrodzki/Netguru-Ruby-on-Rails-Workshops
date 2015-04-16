@@ -1,5 +1,5 @@
-.col-lg-12.col-md-12.col-sm-12.col-xs-12
-  .background
+.col-lg-offset-2.col-md-offset-1.col-sm-offset-1
+  .col-lg-8.col-md-10.col-sm-10.col-xs-12.user-title-area
     -# section for gravatar
     .col-lg-4.col-md-4.col-sm-4.col-xs-4
       .pull-right #{image_tag user.gravatar_url}
@@ -15,38 +15,33 @@
 
 .col-lg-offset-2.col-md-offset-1.col-sm-offset-1
   .col-lg-8.col-md-10.col-sm-10.col-xs-12
-    %hr
     .row
       -# section for items
       .col-lg-6.col-md-6.col-sm-6.col-xs-12
-        %h3.text-center Your newest items.
+        %h3.text-center.item-review-title-font Your newest items.
         -if user.products.size == 0
           -# message for no products
-          .thumbnail
-            .caption
-              %h4.text-center You didn't post any products yet.
+          .user-item-review-area
+            %h4.text-center You didn't post any products yet.
         - else
           -# loop showing last 5 products
           - user.products.limit(5).each do |product|
-            .thumbnail
-              .caption
-                %h4.text-center= product.title.upcase
-                %p.text-center.text-muted= product.created_at.strftime("%e %B %Y")
-                %p.text-center.text-muted There are #{ pluralize(product.reviews.size, 'review' )} for your product.
+            .user-item-review-area
+              %h4.text-center.user-item-text= product.title.upcase
+              %p.text-center.text-muted= product.created_at.strftime("%e %B %Y")
+              %p.text-center.text-muted There are #{ pluralize(product.reviews.size, 'review' )} for your product.
 
       -# section for reviews
       .col-lg-6.col-md-6.col-sm-6.col-xs-12
-        %h3.text-center Your newest reviews.
+        %h3.text-center.item-review-title-font Your newest reviews.
         -if user.reviews.size == 0
           -# message for no reviews
-          .thumbnail
-            .caption
-              %h4.text-center You didn't publish any reviews yet.
+          .user-item-review-area
+            %h4.text-center You didn't publish any reviews yet.
         - else
           -# loop showing last 5 reviews
           - user.reviews.limit(5).each do |review|
-            .thumbnail
-              .caption
-                %h4.text-center= truncate(review.content, length: 40, separator: ' ')
-                %p.text-center.text-muted= review.created_at.strftime("%e %B %Y")
+            .user-item-review-area
+              %h4.text-center.user-review-text= truncate(review.content, length: 40, separator: ' ')
+              %p.text-center.text-muted= review.created_at.strftime("%e %B %Y")
 
