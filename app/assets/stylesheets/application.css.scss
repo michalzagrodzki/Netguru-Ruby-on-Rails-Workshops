@@ -68,6 +68,7 @@ $button-border-color: #2f2c29;
              Title Section
 ******************************************/
 
+// Style related to navbar
 .navbar-modified{
   position: relative;
   margin-bottom: 0px;
@@ -84,6 +85,7 @@ $button-border-color: #2f2c29;
   z-index: 1;
 }
 
+// Style related to background image and color
 .background {
   //position: absolute;
   background-color: $background-color;
@@ -96,6 +98,7 @@ $button-border-color: #2f2c29;
   display: block;
 }
 
+// Style related to footer
 .footer{
   position: relative;
   //top: 2000px;
@@ -111,6 +114,7 @@ $button-border-color: #2f2c29;
 
 }
 
+// Style related to fonts
 .head-font {
   font-family: $mohave-bold;
   color: $head-font-color;
@@ -128,6 +132,9 @@ $button-border-color: #2f2c29;
   font-size: 30px;
 }
 
+// Style related to buttons
+
+// Buttons with category items
 .category-button{
   width: auto;
   height: auto;
@@ -157,4 +164,11 @@ $button-border-color: #2f2c29;
   z-index: 1;
   border-top: 1px solid $button-border-color;
   border-bottom: 1px solid $button-border-color;
+}
+
+// Buttons related to sign up
+
+.btn-user-signup {
+
+
 }
