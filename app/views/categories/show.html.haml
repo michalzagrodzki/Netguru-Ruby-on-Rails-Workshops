@@ -1,16 +1,15 @@
 .col-lg-12.col-md-12.col-sm-12.col-xs-12
   .background
-    %h1.text-center= category.name.capitalize
+    %h1.text-center.category-title-font= category.name.upcase
 
     .row
       - category.products.each do |product|
         .col-lg-3.col-md-3.col-sm-6.col-xs-12
           = link_to [category, product] do
-            .thumbnail
-              .caption
-                %h4.text-center= product.title.capitalize
-                %p.text-center.text-muted= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
-                %p.text-center= truncate(product.description, length: 20, separator: ' ')
+            .product-button
+              %h4.text-center= product.title.capitalize
+              %p.text-center.text-muted.italic= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
+              %p.text-center= truncate(product.description, length: 20, separator: ' ')
   %br/
 -if user_signed_in?
 
@@ -26,4 +25,4 @@
 
 .col-lg-offset-3.col-md-offset-3.col-sm-offset-3
   .col-lg-8.col-md-8.col-sm-8.col-xs-12
-    .btn.btn-default.btn-block= link_to 'Go back to main page', categories_path
+    .btn.btn-default.btn-block.custom-btn-back= link_to 'Go back to main page', categories_path
