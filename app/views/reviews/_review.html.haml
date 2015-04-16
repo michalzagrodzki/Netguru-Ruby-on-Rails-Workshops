@@ -1,4 +1,4 @@
-%p= review.content
+%p.review-description= review.content
 %hr
-  %em.col-md-12.col-sm-12.col-xs-12.text-muted Reviewed by #{ link_to review.author, review.user} on #{review.created_at.strftime("%e %B %Y")}
-  %b.text-center Rated at #{review.rating}
+%p.text-center.review-footer-font Reviewed by #{ link_to review.author, review.user} on #{review.created_at.strftime("%e %B %Y")}
+%p.text-center.rated-review-footer-font RATED AT #{review.rating}
