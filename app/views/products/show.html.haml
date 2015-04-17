@@ -1,4 +1,4 @@
-.col-lg-offset-2.col-md-offset-1.col-sm-offset-1
+.col-lg-offset-3.col-md-offset-1.col-sm-offset-1
   .col-lg-8.col-md-10.col-sm-10.col-xs-12.product-title-area
     %h1.text-center.product-title-font= product.title.upcase
     %h3.text-center= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
@@ -7,7 +7,7 @@
         .caption
           %p= product.description
 
-.col-lg-offset-2.col-md-offset-1.col-sm-offset-1.col-xs-offset-0
+.col-lg-offset-3.col-md-offset-1.col-sm-offset-1.col-xs-offset-0
   .col-lg-8.col-md-10.col-sm-10.col-xs-12
     %h4.text-center.text-muted.review-title-font REVIEWS
     .review-area
@@ -17,13 +17,15 @@
       %hr
       = render 'reviews/form'
       %br/
-.col-lg-offset-3.col-md-offset-1.col-sm-offset-1.col-xs-offset-2
-  .col-lg-6.col-md-10.col-sm-10.col-xs-10
-    %br/
-    %br/
-    = link_to 'Edit product', edit_category_product_path(category.id, product.id), class: 'btn btn-default btn-block custom-secondary-btn-login-signup'
+      
+-if user_signed_in?
+  .col-lg-offset-4.col-md-offset-1.col-sm-offset-1.col-xs-offset-2
+    .col-lg-6.col-md-10.col-sm-10.col-xs-10
+      %br/
+      %br/
+      = link_to 'Edit product', edit_category_product_path(category.id, product.id), class: 'btn btn-default btn-block custom-secondary-btn-login-signup'
 
 
-.col-lg-offset-2.col-sm-offset-1.col-xs-offset-1
+.col-lg-offset-3.col-sm-offset-1.col-xs-offset-1
   .col-lg-8.col-md-10.col-sm-10.col-xs-11
     .btn.btn-default.btn-block.custom-btn-back= link_to 'Back', [category]
