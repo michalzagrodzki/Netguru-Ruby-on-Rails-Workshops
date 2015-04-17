@@ -1,19 +1,17 @@
 .col-lg-12.col-md-12.col-sm-12.col-xs-12
-  .background
-    %h1.text-center.category-title-font= category.name.upcase
+  %h1.text-center.category-title-font= category.name.upcase
 
-    .row
-      - category.products.each do |product|
-        .col-lg-3.col-md-3.col-sm-6.col-xs-12
-          = link_to [category, product] do
-            .product-button
-              %h4.text-center= product.title.capitalize
-              %p.text-center.text-muted.italic= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
-              %p.text-center= truncate(product.description, length: 20, separator: ' ')
-  %br/
+  .row
+    - category.products.each do |product|
+      .col-lg-3.col-md-3.col-sm-6.col-xs-12
+        = link_to [category, product] do
+          .product-button
+            %h4.text-center= product.title.capitalize
+            %p.text-center.text-muted.italic= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
+            %p.text-center= truncate(product.description, length: 20, separator: ' ')
+
 -if user_signed_in?
-
-
+  %br/
   = render 'products/form'
   %br/
 
