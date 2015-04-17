@@ -9,17 +9,17 @@
             %h4.text-center= product.title.capitalize
             %p.text-center.text-muted.italic= number_to_currency(product.price, precision: 2, separator: ",", format: "%u %n")
             %p.text-center= truncate(product.description, length: 20, separator: ' ')
-
+  %br/
+  %br/
+  %br/
 -if user_signed_in?
   %br/
   = render 'products/form'
-  %br/
+
 
 - if current_user.try(:admin?)
   .col-lg-offset-3.col-md-offset-3.col-sm-offset-3
     .col-lg-8.col-md-8.col-sm-8.col-xs-12
-      %br/
-      %br/
       .btn.btn-default.btn-block.custom-primary-btn-login-signup= link_to'Edit category', edit_category_path(category)
 
 .col-lg-offset-3.col-md-offset-3.col-sm-offset-3
