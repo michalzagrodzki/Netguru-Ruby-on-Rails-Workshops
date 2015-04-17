@@ -1,24 +1,24 @@
-.col-lg-12.col-md-12.col-sm-12.col-xs-12
-  .background
-
-    -# Elements visible only for admin
-    - if current_user.try(:admin?)
-      %h2.text-center.text-muted List of users
-      %table.table.table-striped
-        %thead
+%br/
+%br/
+.col-lg-12.col-md-12.col-sm-12.col-xs-12.new-element-area
+  -# Elements visible only for admin
+  - if current_user.try(:admin?)
+    %h4.text-center.text-muted.review-title-font List of users
+    %table.table.table-striped
+      %thead
+        %tr
+          %th.col-lg-2.col-xs-1.text-center First name
+          %th.col-lg-2.col-xs-1.text-center Last name
+          %th.col-lg-2.col-xs-1.text-center Posted items
+          %th.col-lg-2.col-xs-1.text-center Published reviews
+          %th.col-lg-2.col-xs-1.text-center Date of last visit
+          %th.col-lg-2.col-xs-1.text-center Date of signup
+      - users.each do |user|
+        %tbody
           %tr
-            %th.col-lg-2.col-xs-1.text-center First name
-            %th.col-lg-2.col-xs-1.text-center Last name
-            %th.col-lg-2.col-xs-1.text-center Posted items
-            %th.col-lg-2.col-xs-1.text-center Published reviews
-            %th.col-lg-2.col-xs-1.text-center Date of last visit
-            %th.col-lg-2.col-xs-1.text-center Date of signup
-        - users.each do |user|
-          %tbody
-            %tr
-              %td.col-lg-2.col-xs-1.text-center #{user.firstname}
-              %td.col-lg-2.col-xs-1.text-center #{user.lastname}
-              %td.col-lg-2.col-xs-1.text-center #{user.products.size}
-              %td.col-lg-2.col-xs-1.text-center #{user.reviews.size}
-              %td.col-lg-2.col-xs-1.text-center #{user.try(:last_sign_in_at).try(:strftime, "%e.%m.%Y")}
-              %td.col-lg-2.col-xs-1.text-center #{user.try(:created_at).try(:strftime, "%e.%m.%Y")}
+            %td.col-lg-2.col-xs-1.text-center #{user.firstname}
+            %td.col-lg-2.col-xs-1.text-center #{user.lastname}
+            %td.col-lg-2.col-xs-1.text-center #{user.products.size}
+            %td.col-lg-2.col-xs-1.text-center #{user.reviews.size}
+            %td.col-lg-2.col-xs-1.text-center #{user.try(:last_sign_in_at).try(:strftime, "%e.%m.%Y")}
+            %td.col-lg-2.col-xs-1.text-center #{user.try(:created_at).try(:strftime, "%e.%m.%Y")}
