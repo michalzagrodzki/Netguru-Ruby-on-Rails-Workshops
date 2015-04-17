@@ -1,6 +1,9 @@
-
-%h2.text-center Edit your product
-  = render 'form'
-%button.btn.btn-default.btn-block= link_to 'Show', category_product_path(category, product)
 %br/
-%button.btn.btn-default.btn-block= link_to 'Back', category_path(category)
+%br/
+.col-lg-offset-5.col-md-offset-4.col-sm-offset-3.col-xs-offset-1
+  .col-lg-4.col-md-6.col-sm-7.col-xs-11.new-element-area
+    %h2.text-center.review-title-font Edit your product
+      = render 'form'
+    %button.btn.btn-default.btn-block.custom-btn-back= link_to 'Show', category_product_path(category, product)
+    %br/
+    %button.btn.btn-default.btn-block.custom-btn-back= link_to 'Back', category_path(category)
