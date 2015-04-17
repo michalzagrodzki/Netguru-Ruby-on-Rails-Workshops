@@ -135,6 +135,18 @@ $review-footer-font-size: 17px;
 
 
 /******************************************
+             HTML Section
+******************************************/
+
+body{
+  height: 100%;
+}
+
+.wrap{
+  min-height: 100%;
+}
+
+/******************************************
              Navbar Section
 ******************************************/
 
@@ -165,12 +177,14 @@ $review-footer-font-size: 17px;
 // Style related to footer
 .footer{
   position: relative;
-  bottom: -60px;
+  bottom: 00px;
   height: 180px;
   padding: 60px 0;
   width: 100%;
   background-color: $nav-bar-color;
   border-top: 1px solid $button-border-color;
+  margin-top: -180px;
+  clear: both;
 
   p {
     color: $footer-font-color;
@@ -204,15 +218,16 @@ $review-footer-font-size: 17px;
 
 // Style related to background image and color
 .background {
-  //position: absolute;
+  position: relative;
+  overflow: auto;
   background-color: $background-color;
-  top: 20px;
+  top: 0px;
   //bottom: 0px;
   width: 100%;
   height: 100%;
-  //min-height: 1000px;
-  //height: 100%;
+  //min-height: 600px;
   display: block;
+  padding-bottom: 180px;
 }
 
 // Style related to fonts
@@ -586,6 +601,17 @@ hr {
 
 }
 
+// User list
+.table-striped{
+  th{
+    font-family: $open-sans-bold;
+  }
+
+  tr{
+    font-family: $open-sans-regular;
+    background-color: $background-color;
+  }
+}
 /******************************************
           Login / Signup Section
 ******************************************/
