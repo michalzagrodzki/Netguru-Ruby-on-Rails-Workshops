@@ -1,14 +1,17 @@
-%h4.text-center.text-muted Write your own review
-= simple_form_for [category, product, review] do |f|
-  - if review.errors.any?
-    #error_explanation
-      %h4.text-center.text-muted= "#{pluralize(review.errors.count, "error")} prevented this review from being saved:"
-      %ul
-        - review.errors.full_messages.each do |msg|
-          %li= msg
-  .form-group
-    = f.text_area :content, class: 'form-control', placeholder: 'Please write here your review.'
-  .form-group
-    = f.input_field :rating, collection: 1..5, class: 'form-control', placeholder: 'Rate between 1 and 5'
+.col-lg-offset-1.col-md-offset-2.col-sm-offset-1.col-xs-offset-1
+  .col-lg-11.col-md-10.col-sm-11.col-xs-11.new-element-area
+    %h4.text-center.text-muted.review-title-font Write your own review
+    = simple_form_for [category, product, review] do |f|
+      - if review.errors.any?
+        #error_explanation
+          %h4.text-center.text-muted= "#{pluralize(review.errors.count, "error")} prevented this review from being saved:"
+          %ul
+            - review.errors.full_messages.each do |msg|
+              %li= msg
+      .form-group
+        = f.text_area :content, class: 'form-control', placeholder: 'Please write here your review.'
+      .form-group
+        = f.input_field :rating, collection: 1..5, class: 'form-control', placeholder: 'Rate between 1 and 5'
+        %br/
 
-  = f.submit 'Publish your review.', class: 'btn btn-info btn-block'
+        = f.submit 'Publish your review.', class: 'btn btn-block custom-primary-btn-login-signup'
