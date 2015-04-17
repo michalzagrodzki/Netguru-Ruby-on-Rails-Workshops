@@ -145,6 +145,7 @@ $review-footer-font-size: 17px;
   background-color: $nav-bar-color;
   border-color: $nav-bar-color;
   border-bottom: 3px solid $button-border-color;
+
   z-index: 1;
 }
 
@@ -154,6 +155,7 @@ $review-footer-font-size: 17px;
   border-bottom: 1px solid $button-border-color;
   bottom: -6px;
   z-index: 0;
+  width: 100%;
 }
 
 /******************************************
@@ -554,8 +556,15 @@ hr {
 
   margin-bottom: 20px;
 
-  // Text of item and review
+  // Text of item
   p{
+    font-family: $open-sans-regular;
+    color: lighten($head-font-color, 20%);
+    font-size: $review-footer-font-size;
+  }
+
+  // Text of review
+  h4{
     font-family: $open-sans-regular;
     color: lighten($head-font-color, 20%);
     font-size: $review-footer-font-size;
