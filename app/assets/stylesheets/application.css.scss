@@ -677,5 +677,17 @@ hr {
     background-color: darken($background-color-shared-link, 5%);
 
   }
+}
+
+/******************************************
+   Add Product/Category/Review Section
+******************************************/
+
+// Area around new element form
+.new-element-area{
+  @extend .login-signup-title-area;
+
+  margin-top: 0px;
+  box-shadow: none;
 
 }
