@@ -1,5 +1,5 @@
 .col-lg-offset-5.col-md-offset-4.col-sm-offset-3.col-xs-offset-1
-  .col-lg-4.col-md-6.col-sm-7.col-xs-11
+  .col-lg-4.col-md-6.col-sm-7.col-xs-11.login-signup-title-area
     %h2.text-center Log In
     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       %br/
@@ -9,5 +9,5 @@
         = f.input_field :password, required: false, class: 'form-control', placeholder: 'Password.'
         = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
       .form-actions
-        = f.button :submit, "LOG IN", class: 'btn btn-info btn-block'
+        = f.button :submit, "LOG IN", class: 'btn btn-block custom-primary-btn-login-signup'
     = render "devise/shared/links"
