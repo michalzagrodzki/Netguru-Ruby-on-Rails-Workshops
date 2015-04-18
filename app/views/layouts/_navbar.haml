@@ -1,12 +1,11 @@
 %nav.navbar.navbar-default.navbar-modified
   .container-fluid
     .row
-      .pull-left.icon-left-logo= link_in_image('Small Logo Link.png', root_path, class: 'navbar-small-link-image')
+      .pull-left.icon-left-logo= link_in_image('Small_Logo_Link.png', root_path, class: 'navbar-small-link-image')
       - if user_signed_in?
-
-        .pull-right.btn.btn-default= link_to "Log out", destroy_user_session_url, method: :delete
-        .pull-right.btn.btn-default= link_to "Edit settings", edit_user_registration_path
-        .pull-right.btn.btn-default= link_to "Profile", current_user
+        .pull-right.icon-right-login= link_in_image('Logout_Icon.png', destroy_user_session_url, {alt: "Log out"}, {method: :delete} )
+        .pull-right.icon-right-login= link_in_image('Edit_Settings.png', edit_user_registration_path, alt: "Edit Settings")
+        .pull-right.icon-right-login= link_in_image(current_user.gravatar_url, current_user, { alt: "Profile", })
       - else
-        .pull-right.icon-right-login= link_in_image('Login Icon.png', new_user_session_path, alt: "Log In")
-        .pull-right.icon-right-login= link_in_image('Signup Icon.png', new_user_registration_path, alt: "Sign Up" )
+        .pull-right.icon-right-login= link_in_image('Login_Icon.png', new_user_session_path, alt: "Log In")
+        .pull-right.icon-right-login= link_in_image('Signup_Icon.png', new_user_registration_path, alt: "Sign Up" )
