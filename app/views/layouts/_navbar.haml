@@ -1,12 +1,12 @@
 %nav.navbar.navbar-default.navbar-modified
   .container-fluid
-    .navbar-header
-      %span.navbar-brand= link_to AppConfig.workshops_name, root_path
-    %p.navbar-text.navbar-right
+    .row
+      .pull-left.icon-left-logo= link_in_image('Small Logo Link.png', root_path, class: 'navbar-small-link-image')
       - if user_signed_in?
-        %p.pull-right.btn.btn-default= link_to "Log out", destroy_user_session_url, method: :delete
-        %p.pull-right.btn.btn-default= link_to "Edit settings", edit_user_registration_path
-        %p.pull-right.btn.btn-default= link_to "Profile", current_user
+
+        .pull-right.btn.btn-default= link_to "Log out", destroy_user_session_url, method: :delete
+        .pull-right.btn.btn-default= link_to "Edit settings", edit_user_registration_path
+        .pull-right.btn.btn-default= link_to "Profile", current_user
       - else
-        %p.pull-right.btn.btn-default= link_to "Sign Up", new_user_registration_path
-        %p.pull-right.btn.btn-default= link_to "Log In", new_user_session_path
+        .pull-right.icon-right-login= link_in_image('Login Icon.png', new_user_session_path, alt: "Log In")
+        .pull-right.icon-right-login= link_in_image('Signup Icon.png', new_user_registration_path, alt: "Sign Up" )
