@@ -11,10 +11,10 @@
             = link_to category do
               .category-button
                 %h4.text-center= category.name.upcase
-                - if current_user.try(:admin?)
-                  .col-lg-offset-3.col-md-offset-3.col-sm-offset-4.col-xs-offset-3
-                    %button.btn.btn-default= link_to 'Edit', edit_category_path(category)
-                    %button.btn.btn-default= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }
+              - if current_user.try(:admin?)
+                .col-lg-offset-3.col-md-offset-3.col-sm-offset-4.col-xs-offset-3
+                  %button.btn.btn-defaultx.custom-btn-admin= link_to 'Edit', edit_category_path(category)
+                  %button.btn.btn-default.custom-btn-admin= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }
 
       - unless user_signed_in?
         .col-lg-offset-2
