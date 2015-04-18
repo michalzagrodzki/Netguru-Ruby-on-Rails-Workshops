@@ -482,6 +482,31 @@ hr {
   display: block;
 }
 
+.custom-edit-category-button {
+  @extend .custom-primary-btn-login-signup;
+
+  // button area
+  $background-color-shared-link: darken($background-color, 25%);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: $background-color-shared-link;
+  border-color: desaturate($background-color-shared-link, 30%);
+  position: relative;
+  z-index: 2;
+
+  // text in button
+  a {
+    font-family: $mohave-regular;
+    font-size: 20px;
+    color: $head-font-color;
+  }
+
+  &:hover{
+    background-color: darken($background-color-shared-link, 5%);
+
+  }
+}
+
 /******************************************
              Review Section
 ******************************************/
