@@ -194,7 +194,13 @@ body{
 .icon-right-login{
   margin-top: 5px;
   margin-right: 15px;
-
+  img{
+    display: block;
+    max-width:32px;
+    max-height:32px;
+    width: auto;
+    height: auto;
+  }
 }
 
 /******************************************
@@ -232,6 +238,8 @@ body{
   font-weight: bold;
   font-size: $main-title-primary-font-size-desktop;
   line-height: 94%;
+  text-align: center;
+  margin-bottom: 40px;
 
   text-shadow: 3px 3px 1px darken($background-color, 20%);
 }
@@ -242,6 +250,8 @@ body{
   font-weight: normal;
   font-style: normal;
   font-size: $secondary-title-primary-font-size-desktop;
+  margin-top: 20px;
+  margin-bottom: 40px;
 
   text-shadow: 1px 1px 1px darken($background-color, 20%);
 }
@@ -343,6 +353,10 @@ body{
   @extend .custom-secondary-btn-login-signup;
 }
 
+.main-logo-icon{
+  text-align: center;
+  margin-top: 35px;
+}
 
 /******************************************
              Category Section
@@ -772,3 +786,39 @@ hr {
   box-shadow: none;
   margin-bottom: 0px;
 }
+
+/******************************************
+                Media Queries
+******************************************/
+
+/* Extra Small devices (mobiles, 320px and up) */
+@media (min-width: 320px) and (max-width: 767px) {
+
+  // Change distance between head titles in mobile views.
+  .head-font {
+    margin-bottom: 40px;
+  }
+
+  .second-head-font {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-logo-icon{
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1920px) {}
