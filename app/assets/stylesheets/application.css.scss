@@ -155,6 +155,9 @@ body{
   //min-height: 600px;
   display: block;
   padding-bottom: 180px;
+
+  // Background image with gradient over it
+  background-image: image_url('Background.png'), linear-gradient(darken($background-color, 10%) 3%, $background-color 20%, darken($background-color, 15%) 80%);
 }
 
 /******************************************
@@ -216,7 +219,8 @@ body{
   font-weight: bold;
   font-size: $main-title-primary-font-size-desktop;
   line-height: 94%;
-  //-webkit-font-smoothing: antialiased;
+
+  text-shadow: 3px 3px 1px darken($background-color, 20%);
 }
 
 .second-head-font {
@@ -225,6 +229,8 @@ body{
   font-weight: normal;
   font-style: normal;
   font-size: $secondary-title-primary-font-size-desktop;
+
+  text-shadow: 1px 1px 1px darken($background-color, 20%);
 }
 
 // Style related to buttons
@@ -242,6 +248,9 @@ body{
   margin: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+  transition: (.2s);
+
+  box-shadow: 0px 5px 10px darken($background-color, 15%);
 
   h4{
     font-family: $mohave-bold;
@@ -251,7 +260,9 @@ body{
 
   &:hover {
     @extend .category-button;
-      text-decoration: none;
+
+    text-decoration: none;
+    box-shadow: 0px 5px 15px darken($background-color, 25%);
    }
 
   &:active {
@@ -281,7 +292,7 @@ body{
   background-color: $nav-bar-color;
   border-radius: 5px;
   border: 1px solid darken($nav-bar-color, 20%);
-  @include transition(.3s);
+  @include transition(.2s);
 
   a {
     font-family: $mohave-bold;
@@ -324,6 +335,7 @@ body{
   font-size: 45px;
   color: $head-font-color;
 
+  text-shadow: 1px 1px 1px darken($background-color, 20%);
 }
 
 // Product button in category list
@@ -400,6 +412,8 @@ body{
 
   border-bottom: 3px solid $button-border-color;
 
+  box-shadow: 0px 5px 10px darken($background-color, 15%);
+
   // price
   h3{
     color: lighten($head-font-color, 30%);
@@ -467,6 +481,8 @@ hr {
   display: block;
   position: relative;
   z-index: 1;
+
+  box-shadow: 0px 5px 10px darken($background-color, 12%);
 
   border-top: 2px solid lighten($button-border-color, 30%);
   border-bottom: 2px solid lighten($button-border-color, 30%);
