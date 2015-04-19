@@ -56,14 +56,12 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 16. Fill `seeds.rb` with 5 accounts for user and one admin account to login and example category with products and reviews.
 
-### Issues to solve:
-
 17. Make sure your project is available on Heroku with **seeds data**.
 
 ## Requirements for qualification of application
 
 1. Tests passed. - Done.
 
-2. Website work on Heroku.
+2. Website work on Heroku. - Done.
 
 3. Complete design of website. - Done.
