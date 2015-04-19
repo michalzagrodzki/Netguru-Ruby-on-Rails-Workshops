@@ -35,6 +35,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Gravtastic gem to show Gravatar images if user have account
 gem 'gravtastic'
 
+
 group :development do
   gem 'spring'
 end
@@ -48,6 +49,10 @@ end
 
 group :test do
   gem 'database_cleaner'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 ruby '2.1.5'
