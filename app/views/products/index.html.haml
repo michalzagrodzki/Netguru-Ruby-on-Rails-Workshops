@@ -1,24 +1,27 @@
--if user_signed_in?
-  %h1 Listing products
+-# new file
+%br/
+%br/
+.col-lg-12.col-md-12.col-sm-12.col-xs-12.new-element-area
 
-  %table
-    %tr
-      %th Title
-      %th Description
-      %th Price
-      %th
-      %th
-      %th
+  -# Elements visible only for signed in user
+  - if user_signed_in?
+    - unless current_user.try(:admin?)
+      = render 'users/useraccess'
 
-    - products.each do |product|
-      %tr
-        %td= product.title
-        %td= product.description
-        %td= product.price
-
-        - if current_user.try(:admin?)
-          %td= link_to 'Show', category_product_path(product.category, product)
-          %td= link_to 'Edit', edit_category_product_path(product.category, product)
-          %td= link_to 'Delete', category_product_path(product.category, product), method: :delete, data: { confirm: 'Are you sure?' }
-
-  %br
+  -# Elements visible only for admin
+  - if current_user.try(:admin?)
+    %h4.text-center.text-muted.review-title-font List of Products
+    %table.table.table-striped
+      %thead
+        %tr
+          %th.col-lg-2.col-xs-1.text-center Name of product
+          %th.col-lg-2.col-xs-1.text-center Description of product
+          %th.col-lg-2.col-xs-1.text-center Price of product
+          %th.col-lg-2.col-xs-1.text-center Number of reviews for product
+      - products.each do |product|
+        %tbody
+          %tr
+            %td.col-lg-2.col-xs-1.text-center #{product.title}
+            %td.col-lg-2.col-xs-1.text-center #{truncate(product.description, length: 40, separator: ' ')}
+            %td.col-lg-2.col-xs-1.text-center #{product.price}
+            %td.col-lg-2.col-xs-1.text-center #{product.reviews.size}
