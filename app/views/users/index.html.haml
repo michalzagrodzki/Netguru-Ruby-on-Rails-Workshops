@@ -1,6 +1,11 @@
 %br/
 %br/
 .col-lg-12.col-md-12.col-sm-12.col-xs-12.new-element-area
+
+  -# Elements visible only for signed in user
+  - if user_signed_in?
+    = render 'users/useraccess'
+
   -# Elements visible only for admin
   - if current_user.try(:admin?)
     %h4.text-center.text-muted.review-title-font List of users
