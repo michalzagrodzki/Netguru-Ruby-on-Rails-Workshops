@@ -4,7 +4,8 @@
 
   -# Elements visible only for signed in user
   - if user_signed_in?
-    = render 'users/useraccess'
+    - unless current_user.try(:admin?)
+      = render 'users/useraccess'
 
   -# Elements visible only for admin
   - if current_user.try(:admin?)
