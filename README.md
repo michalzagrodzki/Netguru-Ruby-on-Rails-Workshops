@@ -22,7 +22,7 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.10
 7. Add bcrypt gem. This gem is required for encrypting passwords.
 8. In Rubymine go to Run/Edit Configurations . Go to Rails/Production, click tab Bundler and check box: 'Run the script in content of the bundle'. Do the same for Rails/Developoment, Rake/test, Rake/spec. After that go to Tools/Run Rake Task and select 'Reload rake task list'. It will load the rake tasks from within the projects libraries and gems.
 9. Change gem from 'ffaker' to 'faker'. Test for Product does not work properly with the previous gem.
-10.Add gem Gravtastic for support of Gravatar images.
+10. Add gem Gravtastic for support of Gravatar images.
 
 ### Issues solved:
 
