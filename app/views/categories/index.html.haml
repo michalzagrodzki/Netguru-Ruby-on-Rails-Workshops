@@ -18,6 +18,16 @@
                   %button.btn.btn-defaultx.custom-btn-admin= link_to 'Edit', edit_category_path(category)
                   %button.btn.btn-default.custom-btn-admin= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }
 
+      - if user_signed_in?
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+
       - unless user_signed_in?
         .col-lg-offset-2
           .col-lg-10
