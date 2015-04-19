@@ -1,5 +1,5 @@
-.col-lg-offset-2.col-md-offset-1.col-sm-offset-1
-  .col-lg-8.col-md-10.col-sm-10.col-xs-12.user-title-area
+.col-lg-offset-3.col-md-offset-1.col-sm-offset-1
+  .col-lg-8.col-md-11.col-sm-11.col-xs-12.user-title-area
     -# section for gravatar
     .col-lg-4.col-md-4.col-sm-4.col-xs-4
       .pull-right #{image_tag user.gravatar_url}
@@ -13,8 +13,8 @@
         %p.text-muted Last time of your visit was on #{ user.last_sign_in_at.strftime("%A, %e %B %Y") }
       %p.text-muted You have #{ pluralize(user.reviews.size, 'review') } and #{ pluralize(user.products.size, 'item') } posted.
 
-.col-lg-offset-2.col-md-offset-1.col-sm-offset-1
-  .col-lg-8.col-md-10.col-sm-10.col-xs-12
+.col-lg-offset-3.col-md-offset-1.col-sm-offset-1
+  .col-lg-8.col-md-11.col-sm-11.col-xs-12
     .row
       -# section for items
       .col-lg-6.col-md-6.col-sm-6.col-xs-12
