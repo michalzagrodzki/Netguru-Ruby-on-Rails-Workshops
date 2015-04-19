@@ -1,4 +1,17 @@
+
+# Description:
+
+# File is divided into sections: Users, Categories, Products, Reviews.
+# Each section represents one model from project
+# Each entry have only data that is sufficient to pass validation test when put into database
+
+
+
+##################################
+
 # Data for User
+
+##################################
 
 user_01 = User.create(
              firstname: 'John',
@@ -60,7 +73,13 @@ user_06 = User.create(
 
 user_06.save!
 
+
+
+##################################
+
 # Data for Category
+
+##################################
 
 cat_01 = Category.create(
             name: 'shoes' )
@@ -82,8 +101,14 @@ cat_04 = Category.create(
 
 cat_04.save!
 
+
+
+##################################
+
 # Data for Products
 # Category - shoes - should be 8 products here
+
+##################################
 
 product_s_01 = Product.create(
             title: 'lace up',
@@ -157,6 +182,7 @@ product_s_08 = Product.create(
 
 product_s_08.save!
 
+
 # Category - hats - should be 8 products here
 
 product_h_01 = Product.create(
@@ -217,7 +243,13 @@ product_b_01 = Product.create(
 
 product_b_01.save!
 
+
+
+##################################
+
 # Reviews
+
+##################################
 
 review_01 = Review.create(
     content: 'splendid',
