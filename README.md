@@ -50,13 +50,13 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 9. Check if each review is assigned to user who wrote it.
 
-### Issues to solve:
-
 12. Don't forget to check if application works in the browser :).
 
 13. Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]). Please use [Bootstrap 3](http://getbootstrap.com/css/) for styling, which is already added to application. Psss! Don't forget about styling `devise` views :).
 
 16. Fill `seeds.rb` with 5 accounts for user and one admin account to login and example category with products and reviews.
+
+### Issues to solve:
 
 17. Make sure your project is available on Heroku with **seeds data**.
 
@@ -66,4 +66,4 @@ Environment is: Windows 7 x64, Ruby 2.1.5p273, Rails 4.1.8
 
 2. Website work on Heroku.
 
-3. Complete design of website.
+3. Complete design of website. - Done.
