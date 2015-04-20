@@ -15,6 +15,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   # routes for showing user profile, show - for current user, index - for admin.
-  resources :users, only: [:show, :index]
+  resources :users
+
+  # route for single user - needed for test - called when user :show is called without [:id]
+  match 'user', to: 'users#show', via: [:get]
+
+  # route for single user
+  match 'user/:id', to: 'users#show', via: [:get]
 
 end
